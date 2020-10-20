@@ -18,7 +18,8 @@ var indexRoutes      = require("./routes/index"),
 
 
 // mongoose.connect("mongodb://localhost/yelp_camp_v11", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
-mongoose.connect("mongodb+srv://duythanh:Password123@yelpcamp.fkdg7.mongodb.net/yelpcamp?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect("mongodb+srv://yelpcamp.fkdg7.mongodb.net/yelpcamp", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
