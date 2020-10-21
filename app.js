@@ -17,7 +17,9 @@ var indexRoutes      = require("./routes/index"),
 	commentRoutes    = require("./routes/comments");
 
 
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+//add the url below to the app on heroku at 'config vars' with key "DATABASEURL" and value "'url'"
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v11";
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 // mongoose.connect("mongodb://localhost/yelp_camp_v11", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 // mongoose.connect("mongodb+srv://duythanh:Password123@yelpcamp.fkdg7.mongodb.net/yelpcamp?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
